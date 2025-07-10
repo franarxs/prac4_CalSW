@@ -8,8 +8,8 @@ public class CampeonTest {
     @Test
 
     public void test_inic_campeones() {
-        Campeon talon = new Campeon("Talon", "Asesino", 120, 35, 5, null);
-        Campeon jax = new Campeon("Jax", "Bruiser", 140, 29, 9, null);
+        Campeon talon = new Campeon("Talon", "Asesino", 120, 35, 5);
+        Campeon jax = new Campeon("Jax", "Bruiser", 140, 29, 9);
 
         assertEquals("Asesino", talon.rol);
         assertEquals("Talon", talon.nombre);
@@ -24,8 +24,8 @@ public class CampeonTest {
     @Test
 
     public void test_atacar() {
-        Campeon talon = new Campeon("Talon", "Asesino", 120, 35, 5, null);
-        Campeon jax = new Campeon("Jax", "Bruiser", 140, 29, 9, null);
+        Campeon talon = new Campeon("Talon", "Asesino", 120, 35, 5);
+        Campeon jax = new Campeon("Jax", "Bruiser", 140, 29, 9);
 
         talon.atacar(jax); 
         assertEquals(140-(35-9 ), jax.puntosVida);
@@ -37,7 +37,7 @@ public class CampeonTest {
     @Test
 
     public void test_recibir_dano() {
-        Campeon talon = new Campeon("Talon", "Asesino", 120, 35, 5, null);
+        Campeon talon = new Campeon("Talon", "Asesino", 120, 35, 5);
 
         talon.recibirDano(50); 
         assertEquals(75, talon.puntosVida);
@@ -47,8 +47,8 @@ public class CampeonTest {
     @Test
 
     public void test_esta_vivo() {
-        Campeon jax = new Campeon("Jax", "Bruiser", 140, 29, 9, null);
-        Campeon talon = new Campeon("Talon", "Asesino", 120, 35, 5, null);
+        Campeon jax = new Campeon("Jax", "Bruiser", 140, 29, 9);
+        Campeon talon = new Campeon("Talon", "Asesino", 120, 35, 5);
 
         jax.recibirDano(200); 
         assertFalse(jax.estaVivo());
